@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="41c0936f-dfe8-4a90-b0e8-0143cb784455" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ChatServer/Service1/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="1db061ab-5c6a-4615-ab9e-0046ac171894" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChatServer/Service1/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="e97ab744-918e-4de2-bc30-20e3ff8ef25d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChatServer/Service1/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="0d2875be-a762-431d-b7f7-a91997eae594" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChatServer/Service1/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="588e9831-3782-4b3b-8dff-7abcc5124a6e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChatServer/Service1/?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

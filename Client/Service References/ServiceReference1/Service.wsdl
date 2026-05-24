@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="WcfChat" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" targetNamespace="WcfChat" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="WcfChat/Imports">
+      <xsd:import schemaLocation="http://localhost:50354/Service.svc?xsd=xsd0" namespace="WcfChat" />
+      <xsd:import schemaLocation="http://localhost:50354/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IService_SitDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:SitDown" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUp" />
+  </wsdl:message>
+  <wsdl:message name="IService_Start_InputMessage">
+    <wsdl:part name="parameters" element="tns:Start" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetDot_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDot" />
+  </wsdl:message>
+  <wsdl:message name="IService_Talk_InputMessage">
+    <wsdl:part name="parameters" element="tns:Talk" />
+  </wsdl:message>
+  <wsdl:message name="IService_randomplace_InputMessage">
+    <wsdl:part name="parameters" element="tns:randomplace" />
+  </wsdl:message>
+  <wsdl:message name="IService_userset_InputMessage">
+    <wsdl:part name="parameters" element="tns:userset" />
+  </wsdl:message>
+  <wsdl:message name="IService_TalkToSomebody_InputMessage">
+    <wsdl:part name="parameters" element="tns:TalkToSomebody" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowLogin_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowLogin" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowLogout_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowLogout" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowSitDown_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowSitDown" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowGetUp_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowGetUp" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowStart_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowStart" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowTalk_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowTalk" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowSetDot_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowSetDot" />
+  </wsdl:message>
+  <wsdl:message name="IService_GameStart_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:GameStart" />
+  </wsdl:message>
+  <wsdl:message name="IService_GameWin_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:GameWin" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateTablesInfo_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTablesInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService_Gotscore_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:Gotscore" />
+  </wsdl:message>
+  <wsdl:message name="IService_ResetGrid_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ResetGrid" />
+  </wsdl:message>
+  <wsdl:message name="IService_InitUsersInfo_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:InitUsersInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService_ShowStar_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowStar" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Login">
+      <wsdl:input wsaw:Action="WcfChat/IService/Login" message="tns:IService_Login_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Logout">
+      <wsdl:input wsaw:Action="WcfChat/IService/Logout" message="tns:IService_Logout_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SitDown">
+      <wsdl:input wsaw:Action="WcfChat/IService/SitDown" message="tns:IService_SitDown_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetUp">
+      <wsdl:input wsaw:Action="WcfChat/IService/GetUp" message="tns:IService_GetUp_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Start">
+      <wsdl:input wsaw:Action="WcfChat/IService/Start" message="tns:IService_Start_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SetDot">
+      <wsdl:input wsaw:Action="WcfChat/IService/SetDot" message="tns:IService_SetDot_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Talk">
+      <wsdl:input wsaw:Action="WcfChat/IService/Talk" message="tns:IService_Talk_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="randomplace">
+      <wsdl:input wsaw:Action="WcfChat/IService/randomplace" message="tns:IService_randomplace_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="userset">
+      <wsdl:input wsaw:Action="WcfChat/IService/userset" message="tns:IService_userset_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="TalkToSomebody">
+      <wsdl:input wsaw:Action="WcfChat/IService/TalkToSomebody" message="tns:IService_TalkToSomebody_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowLogin">
+      <wsdl:output wsaw:Action="WcfChat/IService/ShowLogin" message="tns:IService_ShowLogin_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowLogout">
+      <wsdl:output wsaw:Action="WcfChat/IService/ShowLogout" message="tns:IService_ShowLogout_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowSitDown">
+      <wsdl:output wsaw:Action="WcfChat/IService/ShowSitDown" message="tns:IService_ShowSitDown_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowGetUp">
+      <wsdl:output wsaw:Action="WcfChat/IService/ShowGetUp" message="tns:IService_ShowGetUp_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowStart">
+      <wsdl:output wsaw:Action="WcfChat/IService/ShowStart" message="tns:IService_ShowStart_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowTalk">
+      <wsdl:output wsaw:Action="WcfChat/IService/ShowTalk" message="tns:IService_ShowTalk_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowSetDot">
+      <wsdl:output wsaw:Action="WcfChat/IService/ShowSetDot" message="tns:IService_ShowSetDot_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GameStart">
+      <wsdl:output wsaw:Action="WcfChat/IService/GameStart" message="tns:IService_GameStart_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GameWin">
+      <wsdl:output wsaw:Action="WcfChat/IService/GameWin" message="tns:IService_GameWin_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UpdateTablesInfo">
+      <wsdl:output wsaw:Action="WcfChat/IService/UpdateTablesInfo" message="tns:IService_UpdateTablesInfo_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Gotscore">
+      <wsdl:output wsaw:Action="WcfChat/IService/Gotscore" message="tns:IService_Gotscore_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ResetGrid">
+      <wsdl:output wsaw:Action="WcfChat/IService/ResetGrid" message="tns:IService_ResetGrid_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="InitUsersInfo">
+      <wsdl:output wsaw:Action="WcfChat/IService/InitUsersInfo" message="tns:IService_InitUsersInfo_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowStar">
+      <wsdl:output wsaw:Action="WcfChat/IService/ShowStar" message="tns:IService_ShowStar_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
