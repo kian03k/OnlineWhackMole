@@ -2,7 +2,8 @@
 # 🔥 C# / WPF / 多项目 通用 .gitignore
 # 自动忽略所有子目录的编译垃圾
 # ==============================================
-
+Service/App_Data/player.mdf
+Service/App_Data/player_log.ldf
 # 编译输出目录（所有项目生效）
 bin/
 obj/
