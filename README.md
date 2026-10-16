@@ -8,6 +8,26 @@
 
   ---
 
+  ## 📂 目录结构
+
+  ```text
+  DaDiShu.sln            # 解决方案（含 Client、Service 两个项目）
+  ├── Client/            # WPF 客户端（登录、注册、对战界面）
+  ├── Service/           # WCF 服务端
+  │   ├── Database/      # 建库 SQL 脚本（见下方「数据库构建步骤」）
+  │   └── App_Data/      # 存放 player.mdf / player_log.ldf（不入 Git）
+  ├── WpfApp1/           # 内嵌的 WPF 小工程
+  └── demo/              # 课程练习归档（均为 .NET Framework 4.8，无独立说明）
+      ├── A1/            # InkCanvas 墨迹练习（MyInkCanvas / InkVideo）
+      ├── A2/ A3/        # WPF 基础窗口练习
+      ├── A4/            # WCF 服务（Service1.svc）+ WPF 客户端调用
+      ├── A5/            # WCF 聊天服务（ChatServer）+ WPF 客户端
+      ├── InkCanvas/     # InkCanvas 画板练习
+      └── first/         # 第一个 WPF 工程
+  ```
+
+  ---
+
   ## 🚀 项目启动前置说明（重要）
 
   本项目使用 **SQL Server LocalDB 本地数据库**，为缩减 Git 仓库体积、避免大文件提交，**已移除原始 \.mdf/\.ldf 数据库文件**。
